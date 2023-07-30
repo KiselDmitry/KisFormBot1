@@ -46,8 +46,8 @@ const start = () => {
 		if (data === '/again') {
 			return startGame(chatId);
 		}
-		if (data === chats[chatId]) {
-			return await bot.sendMessage(chatId, `Ух ты , да ты везунчик! Ты угадал цыфрау${data}`, againOptions);
+		if (data == chats[chatId]) {
+			return await bot.sendMessage(chatId, `Ух ты , да ты везунчик! Ты угадал цыфру ${data}`, againOptions);
 		} else {
 			return await bot.sendMessage(chatId, `Ты не везунчик! Ты неугадал! Я загадал ${chats[chatId]} !!!`, againOptions);
 		}
